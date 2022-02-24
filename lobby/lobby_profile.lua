@@ -49,21 +49,21 @@ function LOBBY.PROFILE()
         if LOBBY.ShowRectangle(vector2(0.036, 0.03), homeSize, {31, 31, 31, 0}, true, {35, 35, 35, 0}, function()
             LOBBY.SHOW_PROFILE = false
         end) then
-            LOBBY.ShowTxt(0.036, 0.03, "~HUD_COLOUR_GREY~" .. string.upper(GetPhrase("lobby")) .. "~w~ > ~HUD_COLOUR_REDDARK~" .. string.upper(GetPhrase("lobby_profile")), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
+            LOBBY.ShowTxt(0.036, 0.03, "~HUD_COLOUR_GREY~" .. string.upper("Lobby") .. "~w~ > ~HUD_COLOUR_REDDARK~" .. string.upper("Profile"), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
         else
-            LOBBY.ShowTxt(0.036, 0.03, string.upper(GetPhrase("lobby") .. " > ~HUD_COLOUR_REDDARK~" .. GetPhrase("lobby_profile")), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
+            LOBBY.ShowTxt(0.036, 0.03, string.upper("Lobby" .. " > ~HUD_COLOUR_REDDARK~" .. "Profile"), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
         end
 
         -- @ rank
-        if IS_STAFF then
+        if staff then
             LOBBY.rank = "S T A F F"
             LOBBY.rankIcon = "medal_silver_128"
         end
-        if IS_DEV then
+        if dev then
             LOBBY.rank = "D E V E L O P E R"
             LOBBY.rankIcon = "medal_gold_128"
         end
-        if IS_VIP then
+        if vip then
             LOBBY.specialrank = "V I P"
             LOBBY.specialrankIcon = "newstar_32"
         end
