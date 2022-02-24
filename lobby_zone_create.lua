@@ -18,9 +18,9 @@ if LOBBY.ShowCreate then
     if LOBBY.ShowRectangle(vector2(0.036, 0.03), homeSize, {31, 31, 31, 0}, true, {35, 35, 35, 0}, function()
         LOBBY.ShowCreate = false
     end) then
-        LOBBY.ShowTxt(0.036, 0.03, "~HUD_COLOUR_GREY~" .. string.upper(GetPhrase("lobby")) .. "~w~ > ~HUD_COLOUR_REDDARK~" .. string.upper(GetPhrase("lobby_create")), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
+        LOBBY.ShowTxt(0.036, 0.03, "~HUD_COLOUR_GREY~" .. string.upper("Lobby") .. "~w~ > ~HUD_COLOUR_REDDARK~" .. string.upper("Créer"), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
     else
-        LOBBY.ShowTxt(0.036, 0.03, string.upper(GetPhrase("lobby") .. " > ~HUD_COLOUR_REDDARK~" .. GetPhrase("lobby_create")), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
+        LOBBY.ShowTxt(0.036, 0.03, string.upper("Lobby" .. " > ~HUD_COLOUR_REDDARK~" .. "Créer"), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
     end
 
     for i,v in pairs(GetActivePlayers()) do
