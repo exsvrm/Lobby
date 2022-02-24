@@ -178,7 +178,7 @@ Citizen.CreateThread(function()
         end
 
         -- @ lobby
-        LOBBY.ShowTxt(0.036, 0.03, "~HUD_COLOUR_REDDARK~" .. string.upper(GetPhrase("lobby")), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
+        LOBBY.ShowTxt(0.036, 0.03, "~HUD_COLOUR_REDDARK~" .. string.upper("Lobby"), false, 0.6, {255, 255, 255, 255}, EUROSTILE, 0) -- title
 
         -- @ go to base sl
         if selectedLanguage == "fr" then
@@ -192,9 +192,9 @@ Citizen.CreateThread(function()
             LOBBY.active = false
             SetEntityCoords(GetPlayerPed(-1), base.spawnpos)
         end) then
-            LOBBY.ShowTxt(0.050, 0.25, "~HUD_COLOUR_GREY~" .. GetPhrase("lobby_go_to_base"), false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
+            LOBBY.ShowTxt(0.050, 0.25, "~HUD_COLOUR_GREY~" .. "Go base", false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
         else
-            LOBBY.ShowTxt(0.050, 0.25, GetPhrase("lobby_go_to_base"), false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
+            LOBBY.ShowTxt(0.050, 0.25, "Go base", false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
         end
 
         -- @ go to combat sl
@@ -209,9 +209,9 @@ Citizen.CreateThread(function()
             LOBBY.active = false
             SetEntityCoords(GetPlayerPed(-1), combat.actualcombat)
         end) then
-            LOBBY.ShowTxt(0.225, 0.25, "~HUD_COLOUR_GREY~" .. GetPhrase("lobby_go_to_combat"), false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
+            LOBBY.ShowTxt(0.225, 0.25, "~HUD_COLOUR_GREY~" .. "Go combat", false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
         else
-            LOBBY.ShowTxt(0.225, 0.25, GetPhrase("lobby_go_to_combat"), false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
+            LOBBY.ShowTxt(0.225, 0.25, "Go combat", false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
         end
 
         -- @ profile sl
@@ -224,9 +224,9 @@ Citizen.CreateThread(function()
         if LOBBY.ShowRectangle(vector2(0.050, 0.35), profileSize, {31, 31, 31, 0}, true, {35, 35, 35, 0}, function()
             LOBBY.SHOW_PROFILE = true
         end) then
-            LOBBY.ShowTxt(0.050, 0.35, "~HUD_COLOUR_GREY~" .. GetPhrase("lobby_profile"), false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
+            LOBBY.ShowTxt(0.050, 0.35, "~HUD_COLOUR_GREY~" .. "Profile", false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
         else
-            LOBBY.ShowTxt(0.050, 0.35, GetPhrase("lobby_profile"), false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
+            LOBBY.ShowTxt(0.050, 0.35, "Profile", false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
         end
 
         -- @ settings sl
@@ -239,9 +239,9 @@ Citizen.CreateThread(function()
         if LOBBY.ShowRectangle(vector2(0.175, 0.35), settingSize, {31, 31, 31, 0}, true, {35, 35, 35, 0}, function()
             -- LOBBY.ShowProfile = true
         end) then
-            LOBBY.ShowTxt(0.175, 0.35, "~HUD_COLOUR_GREY~" .. GetPhrase("lobby_settings"), false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
+            LOBBY.ShowTxt(0.175, 0.35, "~HUD_COLOUR_GREY~" .. "Settings", false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
         else
-            LOBBY.ShowTxt(0.175, 0.35, GetPhrase("lobby_settings"), false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
+            LOBBY.ShowTxt(0.175, 0.35, "Settings", false, 0.6, {255, 255, 255, 255}, 2, 0) -- title
         end
 
         -- @ create sl
@@ -255,9 +255,9 @@ Citizen.CreateThread(function()
             LOBBY.SHOW_NOTIF = true
             LOBBY.SIMPLE_NOTIFICATION("NOTIFICATION", GetPhrase("t_s_not_enabled"), "OK")
         end) then
-            LOBBY.ShowTxt(0.175, 0.75, "~HUD_COLOUR_GREY~" .. string.upper(GetPhrase("lobby_create")), false, 0.6, {255, 255, 255, 255}, TTRN_REGULAR, 0) -- title
+            LOBBY.ShowTxt(0.175, 0.75, "~HUD_COLOUR_GREY~" .. string.upper("Créer"), false, 0.6, {255, 255, 255, 255}, TTRN_REGULAR, 0) -- title
         else
-            LOBBY.ShowTxt(0.175, 0.75, string.upper(GetPhrase("lobby_create")), false, 0.6, {255, 255, 255, 255}, TTRN_REGULAR, 0) -- title
+            LOBBY.ShowTxt(0.175, 0.75, string.upper("Créer"), false, 0.6, {255, 255, 255, 255}, TTRN_REGULAR, 0) -- title
         end
         --]]
 
